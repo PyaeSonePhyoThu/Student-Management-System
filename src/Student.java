@@ -33,7 +33,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student Id : " + getStudentId() + "\nStudent Name : " + getName() + "\nCourse : " + getCourse() + "\n";
+        return "Student Id : " + getStudentId() + " | Student Name : " + getName() + " | Course : " + getCourse();
     }
 
 }
