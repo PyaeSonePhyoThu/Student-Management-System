@@ -31,12 +31,15 @@ public class AdminPanel {
     {
         for(Student s : student)
         {
-            try {
+            try 
+            {
                 if(s.getStudentId().equalsIgnoreCase(id))
                 {
                     student.remove(s);
                 }  
-            } catch (ConcurrentModificationException e) {
+            } 
+            catch (ConcurrentModificationException e) 
+            {
                 System.out.println(e);
             }
             
