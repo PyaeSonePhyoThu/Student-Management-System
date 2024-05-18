@@ -29,20 +29,30 @@ public class AdminPanel {
 
     public void deleteStudent(String id)
     {
-        for(Student s : student)
+        try 
         {
-            try 
+            for(Student s : student)
             {
                 if(s.getStudentId().equalsIgnoreCase(id))
                 {
                     student.remove(s);
                 }  
             } 
-            catch (ConcurrentModificationException e) 
+        }
+        catch (ConcurrentModificationException e) 
+        {
+            System.out.println();
+        }      
+    }
+
+    public void updateStudentCourse(String id, String coursename)
+    {
+        for(Student s : student)
+        {
+            if(s.getStudentId().equals(id))
             {
-                System.out.println(e);
+                s.setCourse(coursename);
             }
-            
         }
     }
 }
